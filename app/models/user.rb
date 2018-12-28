@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,32}\z/ }
 
   has_secure_password
+
+  has_many :tasks
 end

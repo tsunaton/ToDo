@@ -1,0 +1,22 @@
+<h1>Tasks#Edit</h1>
+  <%= form_for @task do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <%= f.label :scheduled_finish_date %>
+      <%= f.date_select :scheduled_finish_date %>
+    </div>
+    <div>
+      <%= f.label :priority %>
+      <%= f.select :priority, Task.priorities.keys.to_a %>
+    </div>
+    <%= f.submit "save changes" %>
+    <%= link_to "back", task_path %>
+  <% end %>
+</div>

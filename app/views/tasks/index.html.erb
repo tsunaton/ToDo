@@ -1,0 +1,52 @@
+<h1>Tasks#index</h1>
+
+<% if log_in? %>
+  <%= "only logged in user can see the contents" %>
+  <%= link_to 'login', login_path %>
+
+  <%= current_user.name %>
+
+<% else %>
+  <h2><%= "hello, #{current_user.name}" %></h2>
+  <div><%= link_to 'new task', new_task_path %></div>
+
+  <ul class = "list_style_non">
+    <h3>search by...</h3>
+    <%= form_tag tasks_search_path, method: :get do %>
+    <li>keywords: <%= search_field_tag :search_words %></li>
+    <li>priority: <%= select_tag :priority, options_for_select(Task.priorities), :prompt => "select" %></li>
+    <li>status: <%= select_tag :status, options_for_select(Task.statuses), :prompt => "select" %></li>
+    <li>started at: <%= date_select :task, :start_date %></li>
+    <li>scheduled finish date: <%= date_select :task, :scheduled_finish_date %></li>
+    <li><%= submit_tag 'Search' %></li>
+  <% end %>
+  </ul>
+  <h3>sort by...</h3>
+  <%= button_to 'priority sort', tasks_sort_path(sort_id: 0) %>
+  <%= button_to 'scheduled finish date sort', tasks_sort_path(sort_id: 1) %>
+  <%= button_to 'start date sort', tasks_sort_path(sort_id: 2) %>
+  <%= button_to 'end date sort', tasks_sort_path(sort_id: 3) %>
+  <%= button_to 'title sort', tasks_sort_path(sort_id: 4) %>
+  <%= button_to 'status sort', tasks_sort_path(sort_id: 5) %>
+  <%= @params %>
+
+  <% @tasks.each do |task| %>
+  <div>
+    <%= task.title %>
+    <%= link_to 'detail', task_path(id: task.id) %>
+    <%= task.description %>
+    <%= task.scheduled_finish_date %>
+    <%= task.priority %>
+    <%= task.status %>
+
+    <% if task.start_date.nil? %>
+      <%= link_to 'start', tasks_start_path(id: task.id), method: :post %>
+    <% elsif task.end_date.nil?%>
+      <%= "start date: #{task.start_date}" %>
+      <%= link_to 'done', tasks_end_path(id: task.id), method: :post %>
+    <% else %>
+      <%= "finish date: #{task.end_date}" %>
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
