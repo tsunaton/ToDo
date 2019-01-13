@@ -89,16 +89,25 @@ class TasksController < ApplicationController
     end
   end
 
+  # def search
+  #   if params[:priority].empty?&&params[:status].empty?
+  #     @tasks = Task.title_search(params[:search_words])
+  #   elsif params[:priority].empty?
+  #     @tasks = Task.title_search(params[:search_words]).status_search(params[:status])
+  #   elsif params[:status].empty?
+  #     @tasks = Task.title_search(params[:search_words]).priority_search(params[:priority])
+  #   else
+  #     @tasks = Task.title_search(params[:search_words]).priority_search(params[:priority]).status_search(params[:status])
+  #   end
+  #   render :index
+  # end
+
   def search
-    if params[:priority].empty?&&params[:status].empty?
-      @tasks = Task.title_search(params[:search_words])
-    elsif params[:priority].empty?
-      @tasks = Task.title_search(params[:search_words]).status_search(params[:status])
-    elsif params[:status].empty?
-      @tasks = Task.title_search(params[:search_words]).priority_search(params[:priority])
-    else
-      @tasks = Task.title_search(params[:search_words]).priority_search(params[:priority]).status_search(params[:status])
-    end
+    @task = Search::Task.new(search_params)
+    @tasks = @task
+      .matches
+      # .order(availability: :desc, code: :asc)
+      # .decorate
     render :index
   end
 
@@ -106,6 +115,10 @@ class TasksController < ApplicationController
 
     def task_params
       params.require(:task).permit(:title, :description, :scheduled_finish_date, :priority)
+    end
+
+    def search_params
+      params.require(:task).permit(Search::Task::ATTRIBUTES)
     end
 
     def logged_in_user

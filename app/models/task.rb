@@ -11,11 +11,8 @@ class Task < ApplicationRecord
   scope :status_sort, -> { order(status: :asc) }
   scope :scheduled_finish_date_sort, -> { order(scheduled_finish_date: :asc) }
 
-  scope :title_search, -> (search_words){ where("title LIKE ?", "%#{search_words}%") }
-  scope :priority_search, -> (value){ where(priority: value) }
-  scope :status_search, -> (value){ where(status: value) }
-  # def self.search2(searched, search_words)
-  #   Task.where(["#{searched} LIKE ?", "%#{search_words}%"])
-  # end
+  # scope :title_search, -> (search_words){ where("title LIKE ?", "%#{search_words}%") }
+  # scope :priority_search, -> (value){ where(priority: value) }
+  # scope :status_search, -> (value){ where(status: value) }
 
 end

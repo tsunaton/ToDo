@@ -21,6 +21,7 @@
     <li><%= submit_tag 'Search' %></li>
   <% end %>
   </ul>
+
   <h3>sort by...</h3>
   <%= button_to 'priority sort', tasks_sort_path(sort_id: 0) %>
   <%= button_to 'scheduled finish date sort', tasks_sort_path(sort_id: 1) %>
