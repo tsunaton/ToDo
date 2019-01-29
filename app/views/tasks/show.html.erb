@@ -1,0 +1,14 @@
+<h1>Tasks#Show</h1>
+<ul>
+<li><%= @task.title %></li>
+<li><%= @task.description %></li>
+<li><%= "scheduled finish date:#{@task.scheduled_finish_date}" %></li>
+<li><%= "started at:#{@task.start_date}" %></li>
+<li><%= "finished at:#{@task.end_date}" %></li>
+<li><%= @task.priority %></li>
+<li><%= @task.status%></li>
+<li><%= link_to 'edit', edit_task_path %></li>
+<li><%= link_to 'delete', task_path, method: :delete %></li>
+
+<li><%= link_to "back", tasks_path %></li>
+</ul>
