@@ -1,4 +1,5 @@
 class Search::Task < Search::Base
+#ATTRIBUTESと言う定数を定義
   ATTRIBUTES = %i(
     search_words
     priority

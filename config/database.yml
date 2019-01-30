@@ -15,18 +15,30 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
+<<<<<<< HEAD
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: ToDo_development
+=======
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: todo_development
+>>>>>>> origin/master
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+<<<<<<< HEAD
   database: ToDo_test
+=======
+  database: todo_test
+>>>>>>> origin/master
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -48,7 +60,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+<<<<<<< HEAD
 <<: *default
 adapter: postgresql
 encoding: unicode
 pool: 5
+=======
+  <<: *default
+  database: todo_production
+  username: todo
+  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>
+>>>>>>> origin/master

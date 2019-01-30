@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  descripition: MyString
+  start_date: 2018-12-25
+  scheduled_finish_date: 2018-12-25
+  end_date: 2018-12-25
+  priority: 1
+  status: 1
+
+two:
+  title: MyString
+  descripition: MyString
+  start_date: 2018-12-25
+  scheduled_finish_date: 2018-12-25
+  end_date: 2018-12-25
+  priority: 1
+  status: 1

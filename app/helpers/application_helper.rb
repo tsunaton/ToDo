@@ -8,11 +8,12 @@ module ApplicationHelper
     !current_user.nil?
   end
 
-  
+
   def logged_in_user
     unless log_in?
       flash[:danger] = "Please log in."
       redirect_to login_path
     end
+
   end
 end

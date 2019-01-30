@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "ToDo",
+=======
+  "name": "todo",
+>>>>>>> origin/master
   "private": true,
   "dependencies": {}
 }

@@ -121,5 +121,4 @@ class TasksController < ApplicationController
       params.require(:task).permit(Search::Task::ATTRIBUTES)
     end
 
-    
 end
