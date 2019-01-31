@@ -60,14 +60,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-<<<<<<< HEAD
 <<: *default
 adapter: postgresql
 encoding: unicode
 pool: 5
-=======
-  <<: *default
-  database: todo_production
-  username: todo
-  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>
->>>>>>> origin/master

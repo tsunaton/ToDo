@@ -106,8 +106,10 @@ class TasksController < ApplicationController
 
     def search_params
       #params.require(:task).permit(Search::Task::ATTRIBUTES, task[:start_date(1i)])
+      # params.require(:task)
+      # .permit(:search_words, :priority, :status, :start_date, :scheduled_finish_date)
       params.require(:task)
-      .permit(Search::Task::ATTRIBUTES, :task => [:start_date(1i)])
+      .permit(:task => [:start_date(1i), :start_date(2i) => []])
     end
 
 end
