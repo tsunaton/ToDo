@@ -14,6 +14,5 @@ module ApplicationHelper
       flash[:danger] = "Please log in."
       redirect_to login_path
     end
-
   end
 end

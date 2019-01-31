@@ -1,6 +1,6 @@
 <div>
   <h1>Sign in</h1>
-  <%= form_for @user,url: signup_path do |f| %>
+  <%=form_for(@user, url: users_path)%>  #これでuser#createへのpostで
     <div>
       <%= f.label :name %>
       <%= f.text_field :name %>
