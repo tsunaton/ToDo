@@ -12,14 +12,14 @@
 
   <ul class = "list_style_non">
     <h3>search by...</h3>
-    <%= form_tag tasks_search_path, method: :get do %>
-    <li>keywords: <%= search_field_tag :search_words %></li>
-    <li>priority: <%= select_tag :priority, options_for_select(Task.priorities), :prompt => "select" %></li>
-    <li>status: <%= select_tag :status, options_for_select(Task.statuses), :prompt => "select" %></li>
-    <li>started at: <%= date_select :task, :start_date %></li>
-    <li>scheduled finish date: <%= date_select :task, :scheduled_finish_date %></li>
-    <li><%= submit_tag 'Search' %></li>
-  <% end %>
+    <%= form_with url: tasks_search_path, method: (:get) do |f| %>
+      <li>keywords: <%= f.search_field :search_words %></li>
+      <li>priority: <%= f.select :priority, options_for_select(Task.priorities), :prompt => "select" %></li>
+      <li>status: <%= f.select :status, options_for_select(Task.statuses), :prompt => "select" %></li>
+      <li>started at: <%= f.date_select :start_date %></li>
+      <li>scheduled finish date: <%= f.datetime_select :scheduled_finish_date %></li>
+      <li><%= f.submit 'Search' %></li>
+    <% end %>
   </ul>
 
   <h3>sort by...</h3>
@@ -29,7 +29,6 @@
   <%= button_to 'end date sort', tasks_sort_path(sort_id: 3) %>
   <%= button_to 'title sort', tasks_sort_path(sort_id: 4) %>
   <%= button_to 'status sort', tasks_sort_path(sort_id: 5) %>
-  <%= @params %>
 
   <% @tasks.each do |task| %>
   <div>

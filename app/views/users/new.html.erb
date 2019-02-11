@@ -1,6 +1,7 @@
 <div>
   <h1>Sign in</h1>
-  <%=form_for(@user, url: users_path)%>  #これでuser#createへのpostで
+  <%=form_for(@user, url: users_path)%>
+  これでuser#createへのpostへ
     <div>
       <%= f.label :name %>
       <%= f.text_field :name %>

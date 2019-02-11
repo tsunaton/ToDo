@@ -1,12 +1,12 @@
 class Search::Task < Search::Base
-#ATTRIBUTESと言う定数を定義
   ATTRIBUTES = %i(
     search_words
     priority
     status
     start_date
     scheduled_finish_date
-  )
+      )
+
 
   attr_accessor(*ATTRIBUTES)
 

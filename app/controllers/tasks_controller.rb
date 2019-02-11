@@ -17,7 +17,7 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = Task.all
+      @tasks = Task.all
   end
 
   def edit
@@ -90,24 +90,16 @@ class TasksController < ApplicationController
   end
 
   def search
-    @task = Search::Task.new(search_params)
-    @tasks = @task
-      .matches
-      # .order(availability: :desc, code: :asc)
-      # .decorate
+    @task = Search::Task.new(search_words: params[:search_words], priority: params[:priority], status: params[:status])
+    @tasks = @task.matches
     render :index
   end
 
   private
 
     def task_params
-      params.require(:task).permit(:title, :description, :scheduled_finish_date, :priority)
-    end
-
-    def search_params
       params.require(:task)
-      .permit(Search::Task::ATTRIBUTES)
-
+            .permit(:title, :description, :scheduled_finish_date, :priority)
     end
 
 end
