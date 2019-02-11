@@ -1,0 +1,19 @@
+<% tasks.each do |task| %>
+<div>
+  <%= task.title %>
+  <%= link_to 'detail', task_path(id: task.id) %>
+  <%= task.description %>
+  <%= task.scheduled_finish_date %>
+  <%= task.priority %>
+  <%= task.status %>
+
+  <% if task.start_date.nil? %>
+    <%= link_to 'start', tasks_start_path(id: task.id), method: :post %>
+  <% elsif task.end_date.nil?%>
+    <%= "start date: #{task.start_date}" %>
+    <%= link_to 'done', tasks_end_path(id: task.id), method: :post %>
+  <% else %>
+    <%= "finish date: #{task.end_date}" %>
+  <% end %>
+</div>
+<% end %>

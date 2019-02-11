@@ -11,7 +11,6 @@ class Search::Task < Search::Base
   attr_accessor(*ATTRIBUTES)
 
   def matches
-    binding.pry
     t = ::Task.arel_table
     results = ::Task.all
     results = results.where(contains(t[:title], search_words)) if search_words.present?

@@ -18,7 +18,7 @@
       <li>status: <%= f.select :status, options_for_select(Task.statuses), :prompt => "select" %></li>
       <li>started at: <%= f.date_select :start_date %></li>
       <li>scheduled finish date: <%= f.datetime_select :scheduled_finish_date %></li>
-      <li><%= f.submit 'Search' %></li>
+      <li><%= f.submit 'Search', remote: true %></li>
     <% end %>
   </ul>
 
@@ -29,24 +29,9 @@
   <%= button_to 'end date sort', tasks_sort_path(sort_id: 3) %>
   <%= button_to 'title sort', tasks_sort_path(sort_id: 4) %>
   <%= button_to 'status sort', tasks_sort_path(sort_id: 5) %>
-
-  <% @tasks.each do |task| %>
-  <div>
-    <%= task.title %>
-    <%= link_to 'detail', task_path(id: task.id) %>
-    <%= task.description %>
-    <%= task.scheduled_finish_date %>
-    <%= task.priority %>
-    <%= task.status %>
-
-    <% if task.start_date.nil? %>
-      <%= link_to 'start', tasks_start_path(id: task.id), method: :post %>
-    <% elsif task.end_date.nil?%>
-      <%= "start date: #{task.start_date}" %>
-      <%= link_to 'done', tasks_end_path(id: task.id), method: :post %>
-    <% else %>
-      <%= "finish date: #{task.end_date}" %>
-    <% end %>
+<%= @tasks.count %>
+<div id="results_area">
+  <%= render partial: "results", locals: {tasks: @tasks} %>
   </div>
-  <% end %>
+
 <% end %>

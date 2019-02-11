@@ -92,7 +92,10 @@ class TasksController < ApplicationController
   def search
     @task = Search::Task.new(search_words: params[:search_words], priority: params[:priority], status: params[:status])
     @tasks = @task.matches
-    render :index
+    respond_to do |format|
+      format.html
+      format.js 
+    end
   end
 
   private
