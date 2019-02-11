@@ -1,1 +1,1 @@
-$("#results_area").html("  <%= render partial: "results", locals: {tasks: @tasks} %>")
+$('#results_area').html('<%= j(render "results", tasks: @tasks) %>');

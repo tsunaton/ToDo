@@ -1,7 +1,6 @@
 <div>
   <h1>Sign in</h1>
-  <%=form_for(@user, url: users_path)%>
-  これでuser#createへのpostへ
+  <%= form_for(@user, url: '/signup') do |f| %>
     <div>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -18,7 +17,7 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
     </div>
-    <%= f.submit "❤️登録❤️" %>
+    <%= f.submit "登録" %>
   <% end %>
   <%= link_to 'account already exist?', login_path %>
 </div>

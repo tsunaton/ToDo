@@ -29,9 +29,6 @@
   <%= button_to 'end date sort', tasks_sort_path(sort_id: 3) %>
   <%= button_to 'title sort', tasks_sort_path(sort_id: 4) %>
   <%= button_to 'status sort', tasks_sort_path(sort_id: 5) %>
-<%= @tasks.count %>
-<div id="results_area">
-  <%= render partial: "results", locals: {tasks: @tasks} %>
-  </div>
+<div id="results_area"><%= render 'results', tasks: @tasks %></div>
 
 <% end %>
