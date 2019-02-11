@@ -11,11 +11,13 @@ class Search::Task < Search::Base
   attr_accessor(*ATTRIBUTES)
 
   def matches
+    binding.pry
     t = ::Task.arel_table
     results = ::Task.all
     results = results.where(contains(t[:title], search_words)) if search_words.present?
     results = results.where(contains(t[:priority], priority)) if priority.present?
     results = results.where(contains(t[:status], status)) if status.present?
     results
+
   end
 end
