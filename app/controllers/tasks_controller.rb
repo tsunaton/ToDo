@@ -94,7 +94,7 @@ class TasksController < ApplicationController
     @tasks = @task.matches
     respond_to do |format|
       format.html
-      format.js 
+      format.js {render 'index', tasks: @tasks}
     end
   end
 
