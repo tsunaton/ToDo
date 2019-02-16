@@ -9,7 +9,6 @@
 <% else %>
   <h2><%= "hello, #{current_user.name}" %></h2>
   <div><%= link_to 'new task', new_task_path %></div>
-
   <ul class = "list_style_non">
     <h3>search by...</h3>
     <%= form_with url: tasks_search_path, method: (:get) do |f| %>
@@ -29,6 +28,7 @@
   <%= button_to 'end date sort', tasks_sort_path(sort_id: 3) %>
   <%= button_to 'title sort', tasks_sort_path(sort_id: 4) %>
   <%= button_to 'status sort', tasks_sort_path(sort_id: 5) %>
+
 <div id="results_area"><%= render 'results', tasks: @tasks %></div>
 
 <% end %>

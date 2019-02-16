@@ -90,7 +90,8 @@ class TasksController < ApplicationController
   end
 
   def search
-    @task = Search::Task.new(search_words: params[:search_words], priority: params[:priority], status: params[:status])
+    @task = SearchTask.new(title: params[:search_words])
+    @task.start_date = Time.zone.local(params["start_date(1i)"].to_i, params["start_date(2i)"].to_i, params["start_date(3i)"].to_i)
     @tasks = @task.matches
     respond_to do |format|
       format.html
