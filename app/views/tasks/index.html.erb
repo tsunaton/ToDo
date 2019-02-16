@@ -15,8 +15,8 @@
       <li>keywords: <%= f.search_field :search_words %></li>
       <li>priority: <%= f.select :priority, options_for_select(Task.priorities), :prompt => "select" %></li>
       <li>status: <%= f.select :status, options_for_select(Task.statuses), :prompt => "select" %></li>
-      <li>started at: <%= f.date_select :start_date %></li>
-      <li>scheduled finish date: <%= f.datetime_select :scheduled_finish_date %></li>
+      <li>started at: <%= f.date_select :start_date, :include_blank => true %></li>
+      <li>scheduled finish date: <%= f.date_select :scheduled_finish_date,:include_blank => true %></li>
       <li><%= f.submit 'Search', remote: true %></li>
     <% end %>
   </ul>

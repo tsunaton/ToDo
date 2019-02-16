@@ -8,10 +8,10 @@ class SearchTask
       )
   attr_accessor(*ATTRIBUTES)
 
-  def initialize(title,
+  def initialize(title = nil,
                 priority = nil,
                 status = nil,
-                start_date = nil)
+                start_date = nil )
     @title = title
     @priority = priority
     @status =  status
@@ -21,10 +21,10 @@ class SearchTask
   def matches
     # t = ::Task.arel_table
     results = ::Task.all
-    results = results.where(title: search_words) if search_words.present?
-    results = results.where(priority: priority) if priority.present?
-    results = results.where(status: status) if status.present?
-    binding.pry
-    results = results.where(start_date: start_date.to_date) if start_date.present?
+    results = results.where("title LIKE ?", "%#{@title}%") if @title.present?
+    results = results.where(priority: @priority) if @priority.present?
+    results = results.where(status: @status) if @status.present?
+    results = results.where(start_date: @start_date.to_date ) if @start_date.present?
+    return results
   end
 end
