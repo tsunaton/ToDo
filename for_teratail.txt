@@ -1,0 +1,190 @@
+Enumerating objects: 1698, done.
+Counting objects: 100% (1593/1593), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1377/1377), done.
+Writing objects: 100% (1488/1488), 358.06 KiB | 5.59 MiB/s, done.
+Total 1488 (delta 962), reused 124 (delta 85)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        Your app was upgraded to bundler 2.0.2.
+remote:        Previously you had a successful deploy with bundler 2.0.1.
+remote:        
+remote:        If you see problems related to the bundler version please refer to:
+remote:        https://devcenter.heroku.com/articles/bundler-version#known-upgrade-issues
+remote:        
+remote: 
+remote: -----> Using Ruby version: ruby-2.5.0
+remote: -----> Installing dependencies using bundler 2.0.2
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+remote:        Fetching gem metadata from https://rubygems.org/..........
+remote:        Using rake 12.3.2
+remote:        Using concurrent-ruby 1.1.4
+remote:        Using minitest 5.11.3
+remote:        Using thread_safe 0.3.6
+remote:        Using builder 3.2.3
+remote:        Using erubi 1.8.0
+remote:        Using mini_portile2 2.4.0
+remote:        Using crass 1.0.4
+remote:        Using rack 2.0.6
+remote:        Using nio4r 2.3.1
+remote:        Using websocket-extensions 0.1.3
+remote:        Using mini_mime 1.0.1
+remote:        Using arel 9.0.0
+remote:        Using mimemagic 0.3.3
+remote:        Using bcrypt 3.1.12
+remote:        Using msgpack 1.2.6
+remote:        Using bundler 2.0.1
+remote:        Using byebug 10.0.2
+remote:        Using coderay 1.1.2
+remote:        Using coffee-script-source 1.12.2
+remote:        Using execjs 2.7.0
+remote:        Using method_source 0.9.2
+remote:        Using thor 0.20.3
+remote:        Using ffi 1.10.0
+remote:        Using multi_json 1.13.1
+remote:        Using pg 1.1.4
+remote:        Using puma 3.12.0
+remote:        Using rb-fsevent 0.10.3
+remote:        Using tilt 2.0.9
+remote:        Fetching settingslogic 2.0.9
+remote:        Using turbolinks-source 5.2.0
+remote:        Using i18n 1.5.3
+remote:        Using tzinfo 1.2.5
+remote:        Using nokogiri 1.10.1
+remote:        Using rack-test 1.1.0
+remote:        Using sprockets 3.7.2
+remote:        Using websocket-driver 0.7.0
+remote:        Using mail 2.7.1
+remote:        Using marcel 0.3.3
+remote:        Using bootsnap 1.3.2
+remote:        Using coffee-script 2.4.1
+remote:        Using uglifier 4.1.20
+remote:        Using rb-inotify 0.10.0
+remote:        Using pry 0.12.2
+remote:        Using turbolinks 5.2.0
+remote:        Using activesupport 5.2.2
+remote:        Using loofah 2.2.3
+remote:        Using sass-listen 4.0.0
+remote:        Using pry-byebug 3.6.0
+remote:        Using rails-html-sanitizer 1.0.4
+remote:        Using rails-dom-testing 2.0.3
+remote:        Using globalid 0.4.2
+remote:        Using activemodel 5.2.2
+remote:        Using jbuilder 2.8.0
+remote:        Using sass 3.7.3
+remote:        Using actionview 5.2.2
+remote:        Using activejob 5.2.2
+remote:        Using activerecord 5.2.2
+remote:        Installing settingslogic 2.0.9
+remote:        Using actionpack 5.2.2
+remote:        Using actioncable 5.2.2
+remote:        Using actionmailer 5.2.2
+remote:        Using activestorage 5.2.2
+remote:        Using railties 5.2.2
+remote:        Using sprockets-rails 3.2.1
+remote:        Using coffee-rails 4.2.2
+remote:        Fetching jquery-rails 4.3.5
+remote:        Using rails 5.2.2
+remote:        Fetching rails-i18n 5.1.3
+remote:        Installing rails-i18n 5.1.3
+remote:        Using sass-rails 5.0.7
+remote:        Fetching toastr-rails 1.0.3
+remote:        Installing jquery-rails 4.3.5
+remote:        Installing toastr-rails 1.0.3
+remote:        Bundle complete! 30 Gemfile dependencies, 70 gems now installed.
+remote:        Gems in the groups development and test were not installed.
+remote:        Bundled gems are installed into `./vendor/bundle`
+remote:        Removing bundler (2.0.2)
+remote:        Bundle completed (4.17s)
+remote:        Cleaning up the bundler cache.
+remote: -----> Installing node-v10.15.3-linux-x64
+remote: -----> Detecting rake tasks
+remote: -----> Preparing app for Rails asset pipeline
+remote:        Running: rake assets:precompile
+remote:        rake aborted!
+remote:        NameError: uninitialized constant RailsAdmin
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/config/initializers/rails_admin.rb:1:in `<main>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:657:in `block in load_config_initializer'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:656:in `load_config_initializer'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:614:in `block (2 levels) in <class:Engine>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:613:in `each'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:613:in `block in <class:Engine>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:50:in `each'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:50:in `tsort_each_child'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/config/environment.rb:5:in `<main>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+remote:        
+remote:        Caused by:
+remote:        NameError: uninitialized constant RailsAdmin
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/config/initializers/rails_admin.rb:1:in `<main>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:657:in `block in load_config_initializer'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/activesupport-5.2.2/lib/active_support/notifications.rb:170:in `instrument'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:656:in `load_config_initializer'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:614:in `block (2 levels) in <class:Engine>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:613:in `each'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/engine.rb:613:in `block in <class:Engine>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:50:in `each'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:50:in `tsort_each_child'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/config/environment.rb:5:in `<main>'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+remote:        /tmp/build_c7e64a6acd1b72fa082f3af7a338d12b/vendor/bundle/ruby/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+remote:        Tasks: TOP => environment
+remote:        (See full trace by running task with --trace)
+remote: 
+remote:  !
+remote:  !     Precompiling assets failed.
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to komo-service.
+remote: 
+To https://git.heroku.com/komo-service.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/komo-service.git'
